@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">homeWassignment</string>
+    <string name="Activity1">Activity1</string>
+    <string name="Activity2Page">Activity2Page</string>
+    <string name="StudentID">StudentIDD</string>
+    <string name="Message">Message</string>
+    <string name="ToActivity2">ToActivity2</string>
+    <string name="Quit">Quit</string>
+    <string name="Return">Return</string>
+    <string name="Information">Your Hidden Message is:</string>
+
+
+    </resources>
