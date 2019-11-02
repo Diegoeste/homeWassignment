@@ -13,14 +13,28 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
+        setTitle("Reciever");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        Intent intent =getIntent();
+        String string1 = intent.getStringExtra(MainActivity.BONUS_TEXT1);
+
+
+        TextView textView1 = (TextView) findViewById(R.id.textview1);
+
+
+        textView1.setText(string1);
+
+
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openMainActivity();
+                finish();
             }
         });
     }
@@ -30,16 +44,6 @@ public class Main2Activity extends AppCompatActivity {
             Intent intentmain;
             intentmain = new Intent(this, MainActivity.class);
             startActivity(intentmain);
-
-            Intent intent =getIntent();
-            String string1 = intent.getStringExtra(MainActivity.BONUS_TEXT1);
-            String string2 = intent.getStringExtra(MainActivity.BONUS_TEXT2);
-
-            TextView textView1 = (TextView) findViewById(R.id.textview1);
-            TextView textView2 = (TextView) findViewById(R.id.textview2);
-
-            textView1.setText(string1);
-            textView2.setText(string2);
 
 
     }

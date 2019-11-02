@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
                 openMainActivity2page();
             }
         });
+
+//        Button button = (Button) findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openMainActivity2page();
+//            }
+//        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.quit:
                 finishAndRemoveTask();
+                finish();
+                System.exit(0);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
